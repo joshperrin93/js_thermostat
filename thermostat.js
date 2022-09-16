@@ -9,8 +9,8 @@ class Thermostat {
         return this.temperature
     }
 
-    up(temperature) {
-        this.temperature += temperature
+    up() {
+        this.temperature += 1
         if ((this.temperature > 25) && (this.powerSavingMode === true)) {
             this.temperature = 25
             return this.temperature
@@ -22,8 +22,8 @@ class Thermostat {
         }
     }
 
-    down(temperature) {
-        this.temperature -= temperature
+    down() {
+        this.temperature -= 1
         if (this.temperature < 10) {
             this.temperature = 10
             return this.temperature
